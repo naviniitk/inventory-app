@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+  if error
+    p Error getting dynamic content.
+  else
+    p The product inventory has the following record counts
+
+    ul 
+      li #[strong Products:] !{data.product_count}
+      li #[strong Categories:] !{data.category_count}
+      li #[strong Sellers:] !{data.seller_count}
